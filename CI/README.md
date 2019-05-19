@@ -38,11 +38,11 @@ docker run \
 
 在jenkins的控制台上，选择新建一个多分支项目
 
-![1558259027599](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259027599.png)
+![1558259027599](.\img\1.png)
 
 然后根据提示进行配置
 
-![1558259086200](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259086200.png)
+![1558259086200](.\img\2.png)
 
 其实配置中只需要添加自己的GitHub账号信息即可，其他的选项可以不管
 
@@ -70,11 +70,11 @@ pipeline {
 
 然后把这个项目与GitHub上的项目相关联，push上去之后，可以在GitHub上看到信息
 
-![1558259371330](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259371330.png)
+![1558259371330](.\img\3.png)
 
 下面的叫test的check只是为了测试设置的，对上面的pipeline没有影响，点击Details可以看到jenkins发回的控制台输出
 
-![1558259444416](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259444416.png)
+![1558259444416](.\img\4.png)
 
 ### 添加测试
 
@@ -111,23 +111,23 @@ pipeline {
 
 然后再次push进行测试，此时项目中已经有单元测试，但是这个测试实际上什么都没有做，所以会通过
 
-![1558259704632](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259704632.png)
+![1558259704632](.\img\5.png)
 
 在Details可以看到控制台输出
 
 如果自己故意写一个没有通过的单元测试
 
-![1558259850054](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259850054.png)
+![1558259850054](.\img\6.png)
 
 然后push进行测试
 
 在GitHub上看一下结果
 
-![1558259893424](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259893424.png)
+![1558259893424](.\img\7.png)
 
 显示测试没有通过
 
-![1558259943163](.\img\%5CUsers%5CChuyu%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1558259943163.png)
+![1558259943163](.\img\8.png)
 
 ## References
 
