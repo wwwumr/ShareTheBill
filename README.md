@@ -13,6 +13,18 @@
 3. 查看拼单
 4. 查看历史
 
+## gateway
+
+gateway：9000
+
+client1：8081
+    service： /hi
+
+client2：8082
+    service： /hello
+
+server：8761
+
 ## Code Standard ##
 
 采用阿里java开发手册的规范。
