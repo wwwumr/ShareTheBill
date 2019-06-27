@@ -9,6 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class WordladderApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Client1Application.class, args);
+        SpringApplication.run(WordladderApplication.class, args);
     }
 }
