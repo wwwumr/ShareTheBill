@@ -1,9 +1,9 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
 server:
-  port: 9000
+  port: 9007
 
 spring:
   application:
@@ -15,15 +15,9 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-      - id: client1
-        uri: lb://client1
+      - id: wordladder
+        uri: lb://service-wordladder
         predicates:
-        - Path=/client1/**
-        filters:
-        - StripPrefix=1
-      - id: client2
-        uri: lb://client2
-        predicates:
-        - Path=/client2/**
+        - Path=/wordLadder/**
         filters:
         - StripPrefix=1
