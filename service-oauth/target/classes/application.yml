@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+# 需要使用 redis 的话，放开这里
+#spring:
+#  redis:
+#    host: 127.0.0.1
+#    database: 0
+
+spring:
+  application:
+    name: service-auth
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+logging.level.org.springframework.security: DEBUG
