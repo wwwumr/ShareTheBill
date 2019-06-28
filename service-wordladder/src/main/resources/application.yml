@@ -1,7 +1,8 @@
 spring:  
   application:  
     name: service-wordladder
-
+server:
+  port: 9000
 eureka:  
   client:  
     service-url:  

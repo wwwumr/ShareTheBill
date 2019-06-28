@@ -12,7 +12,7 @@ public class WordLadder {
     private WordList wordList = new WordList();
 
     @GetMapping
-    public String[] say(@RequestParam String start,@RequestParam String end){
+    public String[] say(@RequestParam(value = "start") String start,@RequestParam(value="end")String end){
         return wordList.searchWord(new String[]{start,end});
     }
 
