@@ -1,0 +1,71 @@
+version: '0.1'
+services:
+  eureka:
+    container_name: eureka-server
+    image: chuyuxuan/eurekaserver
+    # networks:
+    #   oauth-network:
+    #     aliases:
+    #       - eureka-server
+    ports:
+      - "8761:8761"
+
+
+  config:
+    container_name: config-server
+    image: chuyuxuan/config-server
+    ports:
+      - "9005:9005"
+    links:
+      - eureka
+  
+  gateway:
+    container_name: gateway
+    image: chuyuxuan/service-gateway
+    ports:
+      - "9007:9007"
+    links:
+      - eureka
+
+  feign:
+    container_name: feign
+    image: chuyuxuan/service-feign
+    ports:
+      - "9003:9003"
+    links:
+      - eureka
+  
+  ribbon:
+    container_name: ribbon
+    image: chuyuxuan/service-ribbon
+    ports:
+      - "9002:9002"
+    links:
+      - eureka
+
+  oauth:
+    container_name: oauth
+    image: chuyuxuan/service-oauth
+    # networks:
+    #   oauth-network:
+    #     aliases:
+    #       - oauth
+    ports:
+      - "8080:8080"
+    links:
+      - eureka
+      - wordladder
+  
+  wordladder:
+    container_name: wordladder
+    image: chuyuxuan/wordladder
+    # networks:
+    #   oauth-network:
+    #     aliases:
+    #       - wordladder
+    ports:
+      - "9000:9000"
+    links:
+      - eureka
+      # - oauth
+  

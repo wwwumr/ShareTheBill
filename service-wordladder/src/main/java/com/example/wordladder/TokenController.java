@@ -38,9 +38,9 @@ public class TokenController{
         params.add("code",code);
         params.add("client_id","aiqiyi");
         params.add("client_secret","secret");
-        params.add("redirect_uri","http://localhost:9000/redirect");
+        params.add("redirect_uri","http://192.168.99.100:9000/redirect");
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(params, headers);
-        ResponseEntity<String> response = restTemplate.postForEntity("http://localhost:8080/oauth/token", requestEntity, String.class);
+        ResponseEntity<String> response = restTemplate.postForEntity("http://192.168.99.100:8080/oauth/token", requestEntity, String.class);
         String token = response.getBody();
         return token;
     }

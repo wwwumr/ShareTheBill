@@ -81,17 +81,10 @@ public class OAuth2ServerConfig {
                     .authorities("ROLE_CLIENT")
                     .scopes("get_user_info", "get_fanslist")
                     .secret("secret")
-                    .redirectUris("http://localhost:9000/redirect")
+                    .redirectUris("http://192.168.99.100:9000/redirect")
                     .autoApprove(true)
-                    .autoApprove("get_user_info")
-                    .and()
-                    .withClient("youku")
-                    .resourceIds(QQ_RESOURCE_ID)
-                    .authorizedGrantTypes("authorization_code", "refresh_token", "implicit")
-                    .authorities("ROLE_CLIENT")
-                    .scopes("get_user_info", "get_fanslist")
-                    .secret("secret")
-                    .redirectUris("http://localhost:8082/youku/qq/redirect");
+                    .autoApprove("get_user_info");
+
             // @formatter:on
         }
 
