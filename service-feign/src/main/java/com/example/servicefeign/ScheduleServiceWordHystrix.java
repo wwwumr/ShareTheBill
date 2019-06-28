@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class ScheduleServiceWordHystrix implements ScheduleServiceWordLadder {
     
     @Override
-    public String excepWords(String name) {
-        return "Sorry, it seems that we can't provide this service now!";
+    public String[] getWordLadder(String start, String end) {
+        return new String[]{"Sorry, it seems that we can't provide this service now!"};
     }
 }

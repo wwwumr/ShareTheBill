@@ -21,9 +21,6 @@ public class GatewayApplication {
                 .route(p -> p
                         .path("/wordLadder")
                         .uri("http://localhost:9003"))
-                .route(p -> p
-                        .path(("/wordLadder"))
-                        .uri("http://localhost:9002"))
                 .build();
     }
 }

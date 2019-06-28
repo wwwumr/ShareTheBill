@@ -12,7 +12,7 @@ public class WordController {
     WordService wordService;
 
     @RequestMapping(value = "/wordLadder")
-    public String getWords(@RequestParam String start, @RequestParam String end){
+    public String[] getWords(@RequestParam String start, @RequestParam String end){
         return wordService.wordService(start, end);
     }
 }

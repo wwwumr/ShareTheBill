@@ -12,12 +12,12 @@ public class WordService {
     RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "wordError")
-    public String wordService(String start, String end) {
-        return restTemplate.getForObject("http://SERVICE-WORDLADDER/wordladder?start=" + start
-                                        + "&end=" + end,String.class);
+    public String[] wordService(String start, String end) {
+        return restTemplate.getForObject("http://SERVICE-WORDLADDER/wordLadder?start=" + start
+                                        + "&end=" + end, String[].class);
     }
 
-    public String wordError(String start, String end) {
-        return "Sorry, it seems that we can't provide this service now";
+    public String[] wordError(String start, String end) {
+        return new String[]{"Sorry, it seems that we can't provide this service now"};
     }
 }

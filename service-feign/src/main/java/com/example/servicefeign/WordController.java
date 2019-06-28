@@ -11,8 +11,8 @@ public class WordController {
 
     @Autowired
     ScheduleServiceWordLadder scheduleServiceWordLadder;
-    @RequestMapping(value = "/wordladder",method = RequestMethod.GET)
-    public String getWords(@RequestParam String start, @RequestParam String end){
+    @RequestMapping(value = "/wordLadder",method = RequestMethod.GET)
+    public String[] getWords(@RequestParam String start, @RequestParam String end){
         return scheduleServiceWordLadder.getWordLadder(start, end);
     }
 }
