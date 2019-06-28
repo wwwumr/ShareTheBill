@@ -11,7 +11,7 @@ public class WordController {
     @Autowired
     WordService wordService;
 
-    @RequestMapping(value = "/wordladder")
+    @RequestMapping(value = "/wordLadder")
     public String getWords(@RequestParam String start, @RequestParam String end){
         return wordService.wordService(start, end);
     }

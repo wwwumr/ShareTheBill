@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "service-wordladder",fallback =  ScheduleServiceWordHystrix.class)
 public interface ScheduleServiceWordLadder {
 
-    @RequestMapping(value = "/wordladder",method = RequestMethod.GET)
+    @RequestMapping(value = "/wordLadder",method = RequestMethod.GET)
     String[] getWordLadder(@RequestParam(value = "start") String start, 
                             @RequestParam(value = "end") String end);
 }

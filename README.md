@@ -2,28 +2,23 @@
 
 ## Team ##
 
-小组：王笑然、褚宇轩、王志远、太靖文
+小组：王笑然、褚宇轩、王志远
 
-## Idea ##
+## 服务端口
 
-我们小组打算做一个拼单app，首先采用微服务架构实现四个功能
+8761：eureka server
 
-1. Oauth
-2. 新建拼单
-3. 查看拼单
-4. 查看历史
+9000&9001: service-wordladder
 
-## gateway
+9002:service-ribbon
 
-gateway：9000
+9003:service-feign
 
-client1：8081
-    service： /hi
+9004:service-zuul
 
-client2：8082
-    service： /hello
+9005:config-server
 
-server：8761
+9006:config-client
 
 ## Code Standard ##
 
