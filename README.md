@@ -20,9 +20,9 @@
 
 9006:config-client 从config-server中读取配置信息
 
-9007: gateway 
+9007: service-gateway 
 
-8080：service-oauth
+9008：service-oauth
 
 ## Code Standard ##
 
